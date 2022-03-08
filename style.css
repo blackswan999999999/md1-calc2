@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: white;
+}
+
+#calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    /*100 view height -> fill 100%*/
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
+
+#inputNum {
+    grid-column: 1 / -1;
+    /*từ cột 1 -> cột cuối cùng*/
+    background-color: black;
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+#calculator>button {
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+}
+
+.operatorBtn {
+    background-color: chocolate;
+    color: white;
+}
+
+.operatorBtn:hover,
+#equalBtn:hover {
+    background-color: lightsalmon;
+}
+
+.numBtn {
+    background-color: dimgray;
+    color: white;
+}
+
+.numBtn:hover {
+    background-color: lightgrey;
+}
+
+#allClearBtn {
+    grid-column: span 3;
+    background-color: darkgrey;
+}
+
+#allClearBtn:hover {
+    background-color: lightgray;
+}
+
+#equalBtn {
+    grid-column: span 2;
+    background-color: chocolate;
+    color: white;
+}
